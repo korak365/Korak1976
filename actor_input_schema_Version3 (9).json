@@ -1,0 +1,28 @@
+{
+    "title": "Input schema of the GitHubTalentScoutScraper",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "repositories": {
+            "title": "GitHub Repositories",
+            "type": "array",
+            "description": "The list of GitHub repositories to scrape (e.g., facebook/react, microsoft/vscode).",
+            "editor": "requestListSources",
+            "prefill": [
+                { "url": "https://github.com/facebook/react" },
+                { "url": "https://github.com/microsoft/vscode" }
+            ]
+        },
+        "token": {
+            "title": "GitHub Access Token",
+            "type": "string",
+            "description": "Your personal GitHub token for authenticated API requests to avoid rate limits."
+        },
+        "topContributors": {
+            "title": "Top Contributors",
+            "type": "integer",
+            "description": "Number of top contributors to retrieve from each repository.",
+            "default": 10
+        }
+    }
+}

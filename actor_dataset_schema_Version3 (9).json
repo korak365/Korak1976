@@ -1,0 +1,30 @@
+{
+    "actorSpecification": 1,
+    "fields": {},
+    "views": {
+        "overview": {
+            "title": "GitHub Contributors",
+            "transformation": {
+                "fields": [
+                    "repository",
+                    "contributors[].login",
+                    "contributors[].contributions",
+                    "contributors[].html_url",
+                    "contributors[].profile.name",
+                    "contributors[].profile.company"
+                ]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "repository": { "label": "Repository", "format": "text" },
+                    "contributors[].login": { "label": "GitHub Username", "format": "text" },
+                    "contributors[].contributions": { "label": "Contributions", "format": "number" },
+                    "contributors[].html_url": { "label": "Profile URL", "format": "link" },
+                    "contributors[].profile.name": { "label": "Name", "format": "text" },
+                    "contributors[].profile.company": { "label": "Company", "format": "text" }
+                }
+            }
+        }
+    }
+}

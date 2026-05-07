@@ -1,0 +1,18 @@
+{
+    "actorOutputSchemaVersion": 1,
+    "title": "GitHub Contributor Data",
+    "properties": {
+        "overview": {
+            "type": "string",
+            "template": "{{links.apiDefaultDatasetUrl}}/items?view=overview"
+        },
+        "columns": {
+            "type": "array",
+            "description": "Columns for viewing results",
+            "items": {
+                "type": "string",
+                "enum": ["repository", "contributors.login", "contributors.contributions", "contributors.html_url", "contributors.profile.name", "contributors.profile.company"]
+            }
+        }
+    }
+}
